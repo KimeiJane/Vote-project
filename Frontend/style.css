@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Gradient Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+/* Container */
+.container {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Options Grid */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Option Styling */
+.option {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.option img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.option:hover img {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.option input[type="radio"] {
+    display: none;
+}
+
+.option input[type="radio"]:checked + label {
+    border: 2px solid #ffd700;
+    background: rgba(255,255,255,0.25);
+}
+
+/* Buttons */
+.button, .button-link {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button {
+    border: none;
+    background: #ffd700;
+    color: #333;
+}
+
+.button:hover {
+    background: #ffca28;
+}
+
+.button-link {
+    background: transparent;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+}
+
+.button-link:hover {
+    background: #ffd700;
+    color: #333;
+}
+
+/* Results Page Bars */
+.result {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.result span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bar-container {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    transition: width 1s ease-in-out;
+}
+
+/* Language-specific gradients */
+.result.go .bar {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+.result.python .bar {
+    background: linear-gradient(90deg, #ffd700, #ffcc00);
+}
+
+.result.javascript .bar {
+    background: linear-gradient(90deg, #f7df1e, #e6d31f);
+}
+
+.result.java .bar {
+    background: linear-gradient(90deg, #ff6f61, #ff3b2e);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

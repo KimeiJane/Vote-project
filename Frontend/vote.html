@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vote Your Favorite Language</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Vote for Your Favorite Programming Language!</h1>
+  <form action="/vote" method="POST">
+    <div class="options-grid">
+      <div class="option">
+        <input type="radio" id="go" name="language" value="Go" required>
+        <label for="go">
+          <img src="/static/image/go.jpeg" alt="Go Logo"> 
+          Go
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" id="python" name="language" value="Python">
+        <label for="python">
+          <img src="/static/image/python.jpeg" alt="Python Logo"> 
+          Python
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" id="javascript" name="language" value="JavaScript">
+        <label for="javascript">
+          <img src="/static/image/Javascript.jpeg" alt="JavaScript Logo"> 
+          JavaScript
+        </label>
+      </div>
+      <div class="option">
+        <input type="radio" id="java" name="language" value="Java">
+        <label for="java">
+          <img src="/static/image/Java.jpeg" alt="Java Logo"> 
+          Java
+        </label>
+      </div>
+    </div>
+    <input type="submit" value="Vote" class="button">
+  </form>
+  <a href="/results" class="button-link">See Results</a>
+</div>
+</body>
+</html>

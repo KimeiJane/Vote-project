@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vote Results</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Vote Results</h1>
+
+  <div class="result go">
+    <span>Go: {{.Go}}</span>
+    <div class="bar-container">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="result python">
+    <span>Python: {{.Python}}</span>
+    <div class="bar-container">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="result javascript">
+    <span>JavaScript: {{.JavaScript}}</span>
+    <div class="bar-container">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="result java">
+    <span>Java: {{.Java}}</span>
+    <div class="bar-container">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <br>
+  <a href="/" class="button-link">Back to Voting</a>
+  <a href="/reset" class="button-link">Reset Votes</a>
+</div>
+</body>
+</html>
